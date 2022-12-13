@@ -1,2 +1,6 @@
 # Feedback-Suggestion-Forms
-Exclusive and Special Form Designed with Modals in discord.js V13 and Slash (/) commands, Before run you must know the basic information about Javascript and discord.js, If have some Issue and Problems while using this Src make sure to contact me on Discord with DM, Hope you Enjoy :) Made with❤️ by Masih#0258
+🚀make sure to read this steps carefully:
+before run this src you must install node.js v16 or higher then use `npm init -y` in your terminal for create package,json file and then use `npm install` to install all requirment package.
+create index.js file for online and process your bot with `client.login(TOKEN)` and some information that you can find in https;//discord.js.guide/
+this src made with Event and Commands Handler and Slash commands so you need to register them
+**📩Due to the complexity of the steps to launch this src, you can DM me anytime and i will help you.**
