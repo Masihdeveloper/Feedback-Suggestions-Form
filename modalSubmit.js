@@ -4,8 +4,8 @@ module.exports = {
   async execute(interaction, client) {
     if (!interaction.isModalSubmit()) return;
     //Modl Submit Feedback/Suggestion
-    if (interaction.customId === "SuggestionRequest") {
-      const SuggestionValue = interaction.fields.getTextInputValue("Suggestion");
+    if (interaction.customId === "SuggestionModal") {
+      const SuggestionValue = interaction.fields.getTextInputValue("SuggestionInput");
       //add your channel ID
       const SuggestionsChannel = interaction.guild.channels.cache.get(
         'Channel ID'
