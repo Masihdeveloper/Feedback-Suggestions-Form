@@ -1,3 +1,11 @@
+/* 
+Feedback/Suggestion Form in Discord.js V14
+Hope you Enjoy, Made with 💜 by Masih#0258
+Github: https://github.com/Masihdev1 | Don't forget to ⭐
+Website: https://masihdev.tk/
+Copyright Masih 2024 All Right Reserved!
+*/
+
 const {
     SlashCommandBuilder,
     ActionRowBuilder,
