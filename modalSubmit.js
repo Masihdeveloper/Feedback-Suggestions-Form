@@ -63,6 +63,12 @@ module.exports = {
       await msg.react("👍");
       await msg.react("🤷");
       await msg.react("👎");
+      
+      await interaction.deferReply({ ephemeral: true });
+      interaction.editReply({
+        content:
+          "Thanks I Submitted Your Feedback/Suggestion For The Server Admins❤",
+      });
     }
   }
 }
