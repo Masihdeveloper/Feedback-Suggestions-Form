@@ -1,7 +1,7 @@
 # Feedback-Suggestion-Forms
 🚀Make sure to read this steps carefully:
 
-Before run this src you must **install node.js v16 or higher** then use 
+Before run this src you must **install node.js V16.9 or higher** then use 
 ```
 npm init -y
 ```
