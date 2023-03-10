@@ -1,33 +1,33 @@
 const {
-    MessageEmbed,
-    MessageActionRow,
-    TextInputComponent,
-    Modal,
+    SlashCommandBuilder,
+    ActionRowBuilder,
+    ModalBuilder,
+    TextInputBuilder,
+    TextInputStyle,
   } = require("discord.js");
-  const { SlashCommandBuilder } = require("@discordjs/builders");
   module.exports = {
     data: new SlashCommandBuilder()
       .setName("suggestions")
       .setDescription("Give your suggestion to the server admins📝"),
     async execute(interaction, client) {
   
-      const modal = new Modal()
-        .setCustomId("SuggestionRequest")
+      const SuggestionModal = new ModalBuilder()
+        .setCustomId("SuggestionModal")
         .setTitle(`${client.user.username} Suggestions`);
   
-      const SuggestFormat = new TextInputComponent()
-        .setCustomId("Suggestion")
+      const SuggestionInput = new TextInputBuilder()
+        .setCustomId("SuggestionInput")
         .setLabel("📝Feedback/Suggestion")
         .setPlaceholder("Please enter your feedback/suggestion or idea that you want to reviewed by our admins")
         .setMinLength(1)
         .setMaxLength(4000)
         .setRequired(true)
-        .setStyle("PARAGRAPH");
+        .setStyle(TextInputStyle.Paragraph);
   
-      const FirstActionRow = new MessageActionRow().addComponents(SuggestFormat);
+      const FirstActionRow = new ActionRowBuilder().addComponents(SuggestionInput);
   
-      modal.addComponents(FirstActionRow);
+      SuggestionModal.addComponents(FirstActionRow);
   
-      await interaction.showModal(modal);
+      await interaction.showModal(SuggestionModal);
     },
   };
