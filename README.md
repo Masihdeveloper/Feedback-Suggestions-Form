@@ -21,4 +21,5 @@ and some information that you can find in https://discord.js.guide/
 this src made with Event and Commands Handler and Slash commands so you need to register them
 
 **📩Due to the complexity of the steps to launch this src, you can DM me on discord: Masih#0258, anytime and i will help you.**
+
 © Copyright: Masih, 2022/12/13
