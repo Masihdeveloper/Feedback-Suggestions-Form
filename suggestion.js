@@ -15,7 +15,7 @@ const {
   } = require("discord.js");
   module.exports = {
     data: new SlashCommandBuilder()
-      .setName("suggestions")
+      .setName("suggestion")
       .setDescription("Give your suggestion to the server admins📝"),
     async execute(interaction, client) {
   
