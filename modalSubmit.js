@@ -8,7 +8,7 @@ module.exports = {
       const SuggestionValue = interaction.fields.getTextInputValue("SuggestionInput");
       //add your channel ID
       const SuggestionsChannel = interaction.guild.channels.cache.get(
-        'Channel ID'
+        'CHANNEL_ID'
       );
 
       const SubmitSuggestionEmbed = new EmbedBuilder()
