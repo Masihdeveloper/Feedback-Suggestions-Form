@@ -1,4 +1,6 @@
 # Feedback-Suggestion-Forms
+Don't forget to fill `CHANNEL_ID` by your information in the modalSubmit.js | Line: 10th
+
 🚀Make sure to read this steps carefully:
 
 Before run this src you must **install node.js V16.9 or higher** then use 
