@@ -15,7 +15,7 @@ to install all requirment package.
 
 Create index.js file for online and process your bot with 
 ```
-client.login(TOKEN)
+client.login("TOKEN")
 ``` 
 and some information that you can find in https://discord.js.guide/
 this src made with Event and Commands Handler and Slash commands so you need to register them
