@@ -1,5 +1,5 @@
 # Feedback-Suggestion-Forms
-Don't forget to fill `modalSubmitChannelId` by your information in the config.json in 1st Line
+Don't forget to fill `modalSubmitChannelId` by your information in the config.json in 2nd Line
 
 🚀Make sure to read this steps carefully:
 
