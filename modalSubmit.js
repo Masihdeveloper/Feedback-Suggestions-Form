@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
+const config = require("./config.json");
 module.exports = {
   name: "interactionCreate",
   async execute(interaction, client) {
@@ -8,7 +9,7 @@ module.exports = {
       const SuggestionValue = interaction.fields.getTextInputValue("SuggestionInput");
       //add your channel ID
       const SuggestionsChannel = interaction.guild.channels.cache.get(
-        'CHANNEL_ID'
+        config.modalSubmitChannelId
       );
 
       const SubmitSuggestionEmbed = new EmbedBuilder()
