@@ -6,16 +6,17 @@ module.exports = {
     if (!interaction.isModalSubmit()) return;
     //Modl Submit Feedback/Suggestion
     if (interaction.customId === "SuggestionModal") {
-      const SuggestionValue = interaction.fields.getTextInputValue("SuggestionInput");
+      const suggestionValue =
+        interaction.fields.getTextInputValue("SuggestionInput");
       //add your channel ID
-      const SuggestionsChannel = interaction.guild.channels.cache.get(
+      const suggestionsChannel = interaction.guild.channels.cache.get(
         config.modalSubmitChannelId
       );
 
-      const SubmitSuggestionEmbed = new EmbedBuilder()
+      const submitSuggestionEmbed = new EmbedBuilder()
 
         .setTitle(`📝 NEW Feedback/Suggestion!`)
-        .setDescription(`${SuggestionValue}`)
+        .setDescription(`${suggestionValue}`)
         .addFields(
           {
             name: `💡 Submitted by:`,
@@ -42,34 +43,30 @@ module.exports = {
           }
         )
         .setThumbnail(
-          `${interaction.user.displayAvatarURL({
-            size: 2048,
-            dynamic: true,
-            format: "png",
-          })}`
+          interaction.user.displayAvatarURL({
+            size: 1024,
+          })
         )
-        .setColor(`${interaction.member.displayHexColor}`)
+        .setColor(interaction.member.displayHexColor)
         .setFooter({
           text: `ID: ${interaction.user.id}`,
-          iconURL: `${interaction.user.displayAvatarURL({
-            size: 2048,
-            dynamic: true,
-            format: "png",
-          })}`,
+          iconURL: interaction.user.displayAvatarURL({
+            size: 1024,
+          }),
         })
         .setTimestamp();
-      const msg = await SuggestionsChannel.send({
-        embeds: [SubmitSuggestionEmbed],
+      const msg = await suggestionsChannel.send({
+        embeds: [submitSuggestionEmbed],
       });
       await msg.react("👍");
       await msg.react("🤷");
       await msg.react("👎");
-      
+
       await interaction.deferReply({ ephemeral: true });
       interaction.editReply({
         content:
           "Thanks I Submitted Your Feedback/Suggestion For The Server Admins❤",
       });
     }
-  }
-}
+  },
+};
