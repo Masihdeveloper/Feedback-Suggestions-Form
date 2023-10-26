@@ -4,11 +4,11 @@ module.exports = {
   name: "interactionCreate",
   async execute(interaction, client) {
     if (!interaction.isModalSubmit()) return;
-    //Modl Submit Feedback/Suggestion
+    // Modal Submit Feedback/Suggestion
     if (interaction.customId === "SuggestionModal") {
       const suggestionValue =
         interaction.fields.getTextInputValue("SuggestionInput");
-      //add your channel ID
+      // Add your channel ID
       const suggestionsChannel = interaction.guild.channels.cache.get(
         config.modalSubmitChannelId
       );
