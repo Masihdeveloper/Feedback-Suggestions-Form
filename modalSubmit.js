@@ -65,7 +65,7 @@ module.exports = {
       await interaction.deferReply({ ephemeral: true });
       interaction.editReply({
         content:
-          "Thanks I Submitted Your Feedback/Suggestion For The Server Admins❤",
+          "Thanks I Submitted Your Feedback/Suggestion For The Server Admins ❤",
       });
     }
   },
