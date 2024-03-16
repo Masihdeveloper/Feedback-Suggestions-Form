@@ -12,7 +12,7 @@ const {
     ModalBuilder,
     TextInputBuilder,
     TextInputStyle,
-  } = require("discord.js")
+  } = require("discord.js");
   module.exports = {
     data: new SlashCommandBuilder()
       .setName("suggestion")
