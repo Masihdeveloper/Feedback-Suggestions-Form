@@ -4,4 +4,4 @@
 
 - **📩 Due to the complexity of the steps to launch this src, you can DM me on discord: Masih#0258, anytime and i will help you.**
 
-© Copyright: Masih, 2022/12/13
+> © Copyright: Masih, 2022/12/13
