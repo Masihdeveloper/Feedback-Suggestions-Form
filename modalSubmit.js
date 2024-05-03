@@ -6,15 +6,14 @@ module.exports = {
     if (!interaction.isModalSubmit()) return;
     // Modal Submit Feedback/Suggestion
     if (interaction.customId === "SuggestionModal") {
+      await interaction.deferReply({ ephemeral: true });
       const suggestionValue =
         interaction.fields.getTextInputValue("SuggestionInput");
       // Add your channel ID
       const suggestionsChannel = interaction.guild.channels.cache.get(
         config.modalSubmitChannelId
       );
-
       const submitSuggestionEmbed = new EmbedBuilder()
-
         .setTitle(`📝 NEW Feedback/Suggestion!`)
         .setDescription(`${suggestionValue}`)
         .addFields(
@@ -49,7 +48,7 @@ module.exports = {
         )
         .setColor(interaction.member.displayHexColor)
         .setFooter({
-          text: `ID: ${interaction.user.id}`,
+          text: `Member ID: ${interaction.user.id}`,
           iconURL: interaction.user.displayAvatarURL({
             size: 1024,
           }),
@@ -58,11 +57,10 @@ module.exports = {
       const msg = await suggestionsChannel.send({
         embeds: [submitSuggestionEmbed],
       });
-      await msg.react("👍");
-      await msg.react("🤷");
+      msg.react("👍");
+      msg.react("🤷");
       await msg.react("👎");
-
-      await interaction.deferReply({ ephemeral: true });
+      
       interaction.editReply({
         content:
           "Thanks I Submitted Your Feedback/Suggestion For The Server Admins ❤",
