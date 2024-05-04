@@ -23,7 +23,7 @@ const {
         .setCustomId("suggestionModal")
         .setTitle(`${client.user.username} Suggestions`);
   
-      const SuggestionInput = new TextInputBuilder()
+      const suggestionInput = new TextInputBuilder()
         .setCustomId("suggestionInput")
         .setLabel("📝Feedback/Suggestion")
         .setPlaceholder("Please enter your feedback/suggestion or idea that you want to reviewed by our admins")
@@ -32,9 +32,9 @@ const {
         .setRequired(true)
         .setStyle(TextInputStyle.Paragraph);
   
-      const FirstActionRow = new ActionRowBuilder().addComponents(SuggestionInput);
+      const firstActionRow = new ActionRowBuilder().addComponents(suggestionInput);
   
-      suggestionModal.addComponents(FirstActionRow);
+      suggestionModal.addComponents(firstActionRow);
   
       await interaction.showModal(suggestionModal);
     },
