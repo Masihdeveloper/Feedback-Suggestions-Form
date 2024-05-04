@@ -14,28 +14,28 @@ module.exports = {
         config.modalSubmitChannelId
       );
       const submitSuggestionEmbed = new EmbedBuilder()
-        .setTitle(`📝 NEW Feedback/Suggestion!`)
+        .setTitle("📝 NEW Feedback/Suggestion!")
         .setDescription(`${suggestionValue}`)
         .addFields(
           {
-            name: `💡 Submitted by:`,
+            name: "💡 Submitted by",
             value: `${interaction.user} | ${interaction.user.tag}`,
             inline: true,
           },
           {
-            name: `📆 Account Created at:`,
+            name: "📆 Account Created at",
             value: `<t:${Math.round(
               interaction.user.createdTimestamp / 1000
-            )}:f> | <t:${Math.round(
+            )}:D> | <t:${Math.round(
               interaction.user.createdTimestamp / 1000
             )}:R>`,
             inline: true,
           },
           {
-            name: `⏰ Joined Server at:`,
+            name: "⏰ Joined Server at",
             value: `<t:${Math.round(
               interaction.member.joinedTimestamp / 1000
-            )}:f> | <t:${Math.round(
+            )}:D> | <t:${Math.round(
               interaction.member.joinedTimestamp / 1000
             )}:R>`,
             inline: true,
@@ -63,7 +63,7 @@ module.exports = {
       
       interaction.editReply({
         content:
-          "Thanks I Submitted Your Feedback/Suggestion For The Server Admins ❤",
+          "Thanks I Submitted your Feedback/Suggestion for the Server Admins ❤",
       });
     }
   },
