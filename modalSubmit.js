@@ -15,7 +15,7 @@ module.exports = {
       );
       const submitSuggestionEmbed = new EmbedBuilder()
         .setTitle("📝 NEW Feedback/Suggestion!")
-        .setDescription(`${suggestionValue}`)
+        .setDescription(suggestionValue)
         .addFields(
           {
             name: "💡 Submitted by",
